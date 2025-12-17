@@ -1,0 +1,8 @@
+# Берём готовый лёгкий веб-сервер
+FROM nginx:alpine
+
+# Кладём наш сайт в стандартную папку Nginx
+COPY index.html /usr/share/nginx/html/index.html
+
+# Документируем порт (в реальности проброс делаем через -p)
+EXPOSE 80
